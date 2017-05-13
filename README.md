@@ -28,6 +28,10 @@ There is a compiled binary under "Downloads", but if you have any sense at all, 
 
 On second thought, if this program makes your system unusable, blame yourself, not me.
 
+## System Requirements ##
+
+* [Microsoft Visual C++ 2017 Redistributable package (x86)](https://download.microsoft.com/download/1/f/e/1febbdb2-aded-4e14-9063-39fb17e88444/vc_redist.x86.exe)
+
 ## Usage ##
 
     tvfw.exe create PATH: Create exception rule for PATH
