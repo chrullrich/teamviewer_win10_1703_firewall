@@ -13,6 +13,21 @@ to create a rule using the firewall GUI (`wf.msc`) that will override this block
 This program creates this rule. Similarly to the built-in rule that apparently causes the problem, this rule is
 not visible in the GUI.
 
+I am not in any way affiliated with TeamViewer; if this program makes your system unusable, blame me, not them.
+
+## WARNING ##
+
+This program modifies your firewall rule set in a way that is not detectable through the GUI or PowerShell
+interfaces. I wrote it, but I very seriously recommend not using it. The security implications of the firewall
+change may be more significant than I am currently aware of.
+
+There is a compiled binary under "Downloads", but if you have any sense at all, you will not run it. Instead:
+
+* read the code to make sure it does not do nefarious things
+* compile it yourself, e.g. with the free Visual Studio Community IDE (it should work for this)
+
+On second thought, if this program makes your system unusable, blame yourself, not me.
+
 ## Usage ##
 
     tvfw.exe create PATH: Create exception rule for PATH
