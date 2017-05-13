@@ -138,6 +138,12 @@ int createExceptionRule(LPCWSTR teamViewerServiceExe)
 
 leave:
 
+	dwRes = FwpmFilterDestroyEnumHandle(hFwEngine, hEnum);
+	if (dwRes != ERROR_SUCCESS) {
+		wprintf(L"FFDEH() failed with %u\n", dwRes);
+		return 1;
+	}
+
 	// If the problematic rule exists, create a new one that allows TV,
 	// with a higher weight so it is evaluated first.
 	if (annoyingRuleId != 0) {
@@ -188,12 +194,6 @@ leave:
 		}
 
 		FwpmFreeMemory((void**)&appId);
-	}
-
-	dwRes = FwpmFilterDestroyEnumHandle(hFwEngine, hEnum);
-	if (dwRes != ERROR_SUCCESS) {
-		wprintf(L"FFDEH() failed with %u\n", dwRes);
-		return 1;
 	}
 
 	return 0;
