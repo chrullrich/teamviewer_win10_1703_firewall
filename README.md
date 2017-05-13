@@ -38,3 +38,7 @@ On second thought, if this program makes your system unusable, blame yourself, n
     tvfw.exe delete: Delete exception rule
 
 For PATH, specify the path to `teamviewer_service.exe`, this is normally `"C:\Program Files (x86)\TeamViewer\teamviewer_service.exe"` on a 64-bit OS. Be sure to include the quotes.
+
+## License ##
+
+CC0, https://creativecommons.org/publicdomain/zero/1.0/
