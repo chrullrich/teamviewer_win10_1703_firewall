@@ -11,9 +11,9 @@ void showFilter(const FWPM_FILTER *filter);
 
 int wmain(int argc, WCHAR *argv[])
 {
-	if (wcscmp(argv[1], L"create") == 0 && argc == 3) {
+	if (argc == 3 && wcscmp(argv[1], L"create") == 0) {
 		return createExceptionRule(argv[2]);
-	} else if (wcscmp(argv[1], L"delete") == 0 && argc == 2)	{
+	} else if (argc == 2 && wcscmp(argv[1], L"delete") == 0)	{
 		return deleteExceptionRule();
 	} else {
 		usage(argv[0]);
