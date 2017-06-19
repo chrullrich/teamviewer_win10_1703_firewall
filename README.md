@@ -1,9 +1,12 @@
 # README #
 
 This is a workaround for a bug that occurs when running TeamViewer on Windows 10 1703, the "Creators Update".
+It is independent of the TeamViewer version. I have tested it only with version 12, but if earlier versions 
+are affected by the same issue, it will be effective for them as well.
 
-Since 1703, TeamViewer is (in many cases) unable to contact its servers unless a user is logged on locally.
-This makes it difficult or impossible to use it for remote access, particularly when combined with Wake-on-LAN.
+Since Windows 10 1703, TeamViewer is (in many cases) unable to contact its servers unless a user is logged on
+locally. This makes it difficult or impossible to use it for remote access, particularly when combined with
+Wake-on-LAN.
 
 The underlying reason for this behavior is 
 [a bug in the TeamViewer service](https://community.teamviewer.com/t5/TeamViewer-12/Windows-10-does-not-look-to-start-service-until-logon/td-p/6120/page/4#U7725)
@@ -18,7 +21,8 @@ I am not in any way affiliated with TeamViewer; if this program makes your syste
 ## WARNING ##
 
 This program modifies your firewall rule set in a way that is not detectable through the GUI or PowerShell
-interfaces. I wrote it, but I very seriously recommend not using it.
+interfaces. I wrote it, but I very seriously recommend not using it. The security implications of the firewall
+change may be more significant than I am currently aware of.
 
 There is a compiled binary under "Downloads", but if you have any sense at all, you will not run it. Instead:
 
